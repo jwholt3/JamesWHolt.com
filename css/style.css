@@ -141,15 +141,23 @@ footer {
     }
 }
 
-/* Groomsmen Pages */
-body.groomsmen-page {
-    background-image: url('../img/GroomsmenBackground.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
+/* Mobile: Image fills screen */
 @media (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
     .groomsmen-page html {
         height: auto;
     }
@@ -157,4 +165,12 @@ body.groomsmen-page {
     .groomsmen-page body {
         height: auto;
     }
+}
+
+/* Groomsmen Pages */
+body.groomsmen-page {
+    background-image: url('../img/GroomsmenBackground.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
